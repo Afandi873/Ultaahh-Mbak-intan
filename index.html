@@ -567,8 +567,8 @@
     </div>
   </div>
 
-  <audio id="laguUlangTahun" loop>
-    <source src="audio/lagu.mp3.mp3" type="audio/mpeg" />
+  <audio id="laguUlangTahun" loop preload="none">
+    <source src="audio/lagu.mp3" type="audio/mpeg" />
   </audio>
 
   <div class="popup" id="openGiftPopup">
@@ -730,8 +730,8 @@
 
       gallery.classList.add("show");
       pesan.classList.add("show");
-      laguUlangTahun.currentTime = 80;
-      laguUlangTahun.play();
+      laguUlangTahun.currentTime = 0;
+      laguUlangTahun.play().catch(() => {});
       buatConfetti();
       buatSparkle();
       buatBalon();
